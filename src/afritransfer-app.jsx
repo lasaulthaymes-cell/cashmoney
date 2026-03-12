@@ -322,18 +322,6 @@ function IncomingMoneyBanner() {
   );
 }
 
-function OfflineBanner() {
-  const {isOnline} = useApp();
-  const {theme:T} = useTheme();
-  if (isOnline) return null;
-  return (
-    <div style={{background:"#B45309", color:"#fff", padding:"8px 16px",
-      display:"flex", alignItems:"center", gap:8, fontSize:12, fontWeight:700,
-      position:"sticky", top:0, zIndex:50}}>
-      <WifiOff/> Mode hors ligne — Certaines fonctionnalités peuvent être limitées
-    </div>
-  );
-}
 function TxRow({t, onPress}) {
   const {theme:T} = useTheme();
   const isRecu = t.type === "reception";
